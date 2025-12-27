@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Duaa</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #000;
+        color: white;
+        overflow: hidden;
+    }
+
+    .page {
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        padding: 40px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .page.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        margin: 10px;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        background: white;
+        color: black;
+    }
+
+    /* Page backgrounds */
+    #page1 { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+    #page2 { background: linear-gradient(135deg, #667eea, #764ba2); }
+    #page3 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+    #page4 { background: linear-gradient(135deg, #f7971e, #ffd200); color: black; }
+    #page5 { background: linear-gradient(135deg, #232526, #414345); }
+    #page6 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+
+    h1 { font-size: 45px; margin-bottom: 15px; }
+    h2 { font-size: 30px; margin-bottom: 10px; }
+    p  { font-size: 20px; max-width: 650px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <h2>Duaa Wassan 💖</h2>
+    <p>Today is special because someone truly amazing was born.</p>
+    <button onclick="nextPage(2)">Next ➡️</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1>🌸 Best Wishes 🌸</h1>
+    <p>
+        May your life be filled with happiness,  
+        success, smiles, and beautiful moments.
+    </p>
+    <button onclick="nextPage(1)">⬅️ Back</button>
+    <button onclick="nextPage(3)">Next ➡️</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>🕌 A Special Dua 🕌</h1>
+    <p>
+        May Allah bless you with peace,  
+        good health, strong faith, and endless joy.  
+        Ameen 🤍
+    </p>
+    <button onclick="nextPage(2)">⬅️ Back</button>
+    <button onclick="nextPage(4)">Next ➡️</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+    <h1>🎂 27 December 🎂</h1>
+    <p>
+        Your birthday deserves all the love,  
+        warmth, and happiness in the world ✨
+    </p>
+    <button onclick="nextPage(3)">⬅️ Back</button>
+    <button onclick="nextPage(5)">Next ➡️</button>
+</div>
+
+<!-- PAGE 5 (Late Wish) -->
+<div class="page" id="page5">
+    <h1>💐 I’m Sorry 💐</h1>
+    <p>
+        I’m really sorry for the late birthday wish 😔  
+        But my prayers, respect, and care for you  
+        are always from the heart 💖
+    </p>
+    <button onclick="nextPage(4)">⬅️ Back</button>
+    <button onclick="nextPage(6)">Next ➡️</button>
+</div>
+
+<!-- PAGE 6 (Love Page) -->
+<div class="page" id="page6">
+    <h1>❤️ From My Heart ❤️</h1>
+    <p>
+        I love you so much, my girl 💖  
+        You mean more to me than words can ever say.  
+        Stay mine, stay happy, stay blessed ✨
+    </p>
+    <button onclick="nextPage(5)">⬅️ Back</button>
+</div>
+
+<script>
+function nextPage(num) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + num).classList.add('active');
+}
+</script>
+
+</body>
+</html>
